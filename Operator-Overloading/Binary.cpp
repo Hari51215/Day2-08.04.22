@@ -2,8 +2,9 @@
 using namespace std;
 class binary
 {
+    public:
 	int value;
-	public:
+	
 		binary()
 		{
 			
@@ -12,19 +13,20 @@ class binary
 		{
 			value=num;
 		}
-		
-		binary operator + (binary obj)
+		binary operator + (binary &obj)
 		{
-			binary obj1;
-			obj1.value = value + obj.value;
-			return obj1;
+			binary temp;
+			temp.value = value + obj.value;
+			return temp;
 		}
+		
 		
 		void print()
 		{
 			cout<<"The Value =" << value << endl;
 		}
 };
+
 
 int main()
 {
