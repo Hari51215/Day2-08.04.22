@@ -2,9 +2,9 @@
 using namespace std;
 class binary
 {
-    public:
-	int value;
-	
+    private:
+		int value;
+	public:
 		binary()
 		{
 			value=0;
