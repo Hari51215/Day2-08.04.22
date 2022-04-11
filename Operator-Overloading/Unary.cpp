@@ -4,14 +4,22 @@ class unary
 {
 	int num;
 	public:
+	    unary ()
+	    {
+	        num=0;
+	    }
+	
 		unary(int n)
 		{
 			num=n;
 		}
 		
-		void operator --()
+		unary operator --()
 		{
-			num--;
+		    unary temp;
+			temp.num=--num;
+			return temp;
+			
 		}
 		void display()
 		{
@@ -21,8 +29,8 @@ class unary
 
 int main()
 {
-	unary u1(45);
-	--u1;
-	u1.display();
+	unary u1(45),u2;
+	u2=--u1;
+	u2.display();
 	return 0;
 }

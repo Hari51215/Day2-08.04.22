@@ -7,7 +7,7 @@ class binary
 	
 		binary()
 		{
-			
+			value=0;
 		}
 		binary(int num)
 		{
